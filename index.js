@@ -1,6 +1,6 @@
-const express = require('express')
-const app = express()
-const bodyParser = require('body-parser')
+var express = require('express')
+var app = express()
+var bodyParser = require('body-parser')
 const axios = require('axios')
 
 app.use(bodyParser.json())

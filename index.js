@@ -49,13 +49,23 @@ app.listen(3000, function() {
 })
 
 defineMessage = (message) => {
+    if (typeof message.text === 'undefined') {
+        return false
+    }
+    
     let result = false
     switch(true) {
-        case (message.text.toLowerCase().indexOf('meeting sis') >= 0):
+        case ((message.from.first_name.toLowerCase().indexOf('aryo') >= 0 || message.from.first_name.toLowerCase().indexOf('alfan') >= 0 || message.from.first_name.toLowerCase().indexOf('satria') >= 0 || message.from.first_name.toLowerCase().indexOf('imam') >= 0) && message.text.toLowerCase().indexOf('meeting sis') >= 0):
             result = 'iya, nih aku buatin linknya. https://zoom.us/j/9046286650'
             break
         case (message.text.toLowerCase().indexOf('mabar sis') >= 0):
             result = 'kuy, ditunggu di loby. @shinichi_coding, @rizkydh, @trastanechora, @wibymf, @kobarseptyanus, @angga_dar, @azulkipli'
+            break
+        case (message.text.toLowerCase().indexOf('ada yang lagi test?') >= 0):
+            result = 'tuh ditanyain lho. ada yang lagi test gak nih? mau merge lho :('
+            break
+        case (message.from.first_name.toLowerCase().indexOf('alfan') >= 0 && message.text.toLowerCase().indexOf('makasih sis') >= 0):
+            result = 'sama-sama tampan :)'
             break
         default:
             result = false

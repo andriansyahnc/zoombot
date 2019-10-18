@@ -57,11 +57,13 @@ defineMessage = (message) => {
           message.from.first_name.toLowerCase().indexOf('aryo') >= 0 ||
           message.from.first_name.toLowerCase().indexOf('satria') >= 0 ||
           message.from.first_name.toLowerCase().indexOf('imam') >= 0 ||
+          message.from.first_name.toLowerCase().indexOf('abi') >= 0 ||
           message.from.first_name.toLowerCase().indexOf('alfan') >= 0
         ) &&
         (
           message.text.toLowerCase().indexOf('zoom kuy') >= 0 ||
-          message.text.toLowerCase().indexOf('meeting sis') >= 0
+          message.text.toLowerCase().indexOf('meeting sis') >= 0 ||
+          message.text.toLowerCase().indexOf('/start') >= 0
         )):
           result = 'kuy kak, pake link ini ya.. https://zoom.us/j/9046286650'
           break

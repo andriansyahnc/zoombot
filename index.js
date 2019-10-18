@@ -84,7 +84,7 @@ defineMessage = (message) => {
           message.text.toLowerCase().indexOf('kuy') >= 0 ||
           message.text.toLowerCase().indexOf('sis') >= 0
         )):
-          result = 'kuy, ditunggu di loby nih. \n@shinichi_coding, @rizkydh, @trastanechora, @wibymf, @kobarseptyanus, @angga_dar, @king_of_bros, @tofas24, @azulkipli'
+          result = 'kuy, ditunggu di loby nih. \n@shinichi_coding, @rizkydh, @trastanechora, @wibymf, @kobarseptyanus, @angga_dar, @king_of_bros, @tofas24, @muhammad_ariyanto, @azulkipli'
           break
       case (message.text.toLowerCase().indexOf('sabar sis') >= 0):
         result = 'iya kak, aku orangnya penyabar kok :\')'

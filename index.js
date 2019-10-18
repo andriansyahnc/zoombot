@@ -116,6 +116,10 @@ defineMessage = (message) => {
           break
       case (message.text.toLowerCase().indexOf('apa kabar sis?')):
           result = 'aing lieur kak.'
+          break
+      case (message.text.toLowerCase().indexOf('bakar bintang kuy') >= 0):
+          result = 'kuy @shinichi_coding, @angga_dar'
+          break
       default:
         result = false
         break

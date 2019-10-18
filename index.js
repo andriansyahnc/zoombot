@@ -85,9 +85,18 @@ defineMessage = (message) => {
       case (message.text.toLowerCase().indexOf('ada yang lagi test?') >= 0):
         result = 'tuh ditanyain lho. ada yang lagi test gak nih? kita mau merge lho :( \n@zhafiranisa, @safikaa, @shelayunita, @herawati_m, @dininovarianti, @fajartabuti, @Ferdi182'
         break
-      case (message.text.toLowerCase().indexOf('makasih sis') >= 0):
-        result = 'sama-sama kakak.. :)'
-        break
+      case (
+        message.text.toLowerCase().indexOf('makasih sis') >= 0 ||
+        message.text.toLowerCase().indexOf('makasih luna') >= 0
+        ):
+          result = 'sama-sama kakak.. :)'
+          break
+      case (
+        message.from.first_name.toLowerCase().indexOf('alfan') >= 0 &&
+        message.text.toLowerCase().indexOf('luna, jelasin ya') >= 0
+        ):
+          result = 'iya kak. \njadi kak alfan hari ini ijin skip dulu ya man-teman. \nmasih lemes ama sedikit pusing. \nuntuk task nya kemaren udah sempet dijelasin ke lead nya. \nuntuk planning nanti ngikut aja dikasi task apapun \nmohon maap banget gak bisa ikut :('
+          break
       default:
         result = false
         break

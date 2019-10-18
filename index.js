@@ -56,7 +56,7 @@ defineMessage = (message) => {
         result = 'Hai kak. kenalin aku Lulu. Bot Assistent buat tim GADA. \n\n'
         result += 'Nih daftar kata-kata yang bisa lulu respon: \n\n'
         result += '- "zoom kuy" = ngajakin zoom (+ ngasi link nya), cuma bisa diperintah sama kak Aryo, kak Satria, kak Imam, kak Azul, sama kak Abi aja\n\n'
-        result += '- "mabar kuy" = ngajakin temen-temen buat mabar ML pas istirahat\n\n'
+        result += '- "mabar kuy" atau "kuy lah" = ngajakin temen-temen buat mabar ML pas istirahat\n\n'
         result += '- "ada yang lagi test?" = nanyain temen-temen QE ada yang lagi testing staging gak, soalnya tim BE mau merge deploy kodingan nih\n\n'
         result += '- "makasih luna" = ucapan makasih buat lulu\n\n'
         result += '- "sabar sis" = nyabarin lulu\n\n'
@@ -79,11 +79,15 @@ defineMessage = (message) => {
           result = 'kuy kak, pake link ini ya.. https://zoom.us/j/9046286650'
           break
       case (
-        message.text.toLowerCase().indexOf('mabar') >= 0 &&
         (
-          message.text.toLowerCase().indexOf('kuy') >= 0 ||
-          message.text.toLowerCase().indexOf('sis') >= 0
-        )):
+          message.text.toLowerCase().indexOf('mabar') >= 0 &&
+          (
+            message.text.toLowerCase().indexOf('kuy') >= 0 ||
+            message.text.toLowerCase().indexOf('sis') >= 0
+          )
+        ) ||
+          message.text.toLowerCase().indexOf('kuy lah') >= 0
+        ):
           result = 'kuy, ditunggu di loby nih. \n@shinichi_coding, @rizkydh, @trastanechora, @wibymf, @kobarseptyanus, @angga_dar, @king_of_bros, @tofas24, @muhammad_ariyanto, @azulkipli'
           break
       case (message.text.toLowerCase().indexOf('sabar sis') >= 0):
@@ -99,8 +103,11 @@ defineMessage = (message) => {
         result = 'tuh ditanyain lho. ada yang lagi test gak nih? kita mau merge lho :( \n@zhafiranisa, @safikaa, @shelayunita, @herawati_m, @dininovarianti, @fajartabuti, @Ferdi182'
         break
       case (
-        message.text.toLowerCase().indexOf('makasih sis') >= 0 ||
-        message.text.toLowerCase().indexOf('makasih luna') >= 0
+        message.text.toLowerCase().indexOf('makasih') >= 0 &&
+          (
+            message.text.toLowerCase().indexOf('sis') >= 0 ||
+            message.text.toLowerCase().indexOf('luna') >= 0
+          )
         ):
           result = 'sama-sama kakak.. :)'
           break

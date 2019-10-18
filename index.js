@@ -49,7 +49,7 @@ defineMessage = (message) => {
     if (!message || (message && typeof message.text === 'undefined')) {
       return false
     }
-    
+
     let result = false
     switch(true) {
       case (message.text.toLowerCase().indexOf('/start') >= 0):
@@ -111,12 +111,11 @@ defineMessage = (message) => {
         ):
           result = 'sama-sama kakak.. :)'
           break
-      case (message.text.toLowerCase().indexOf('sis?') = 0):
+      case (message.text.toLowerCase() === 'sis' || message.text.toLowerCase() === 'sis?'):
           result = 'iya? ada apa kakak?'
           break
-      // case (message.text.toLowerCase().indexOf('kuy') >= 0):
-      //     result = 'BACOT LU BOCAH'
-      //     break
+      case (message.text.toLowerCase().indexOf('apa kabar sis?')):
+          result = 'aing lieur kak.'
       default:
         result = false
         break

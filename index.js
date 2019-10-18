@@ -111,7 +111,7 @@ defineMessage = (message) => {
         ):
           result = 'sama-sama kakak.. :)'
           break
-      case (message.text.toLowerCase() === 'sis'):
+      case (message.text.toLowerCase() === 'sis' || message.text.toLowerCase() === 'sis?'):
           result = 'iya? ada apa kakak?'
           break
       default:

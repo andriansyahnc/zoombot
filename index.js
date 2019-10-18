@@ -55,7 +55,7 @@ defineMessage = (message) => {
       case (message.text.toLowerCase().indexOf('/start') >= 0):
         result = 'Hai kak. kenalin aku Lulu. Bot Assistent buat tim GADA. \n\n'
         result += 'Nih daftar kata-kata yang bisa lulu respon: \n\n'
-        result += '- "zoom kuy" = ngajakin zoom (+ ngasi link nya), cuma bisa diperintah sama kak Aryo, kak Satria, kak Imam, kak Azul, sama kak Abi aja\n\n'
+        result += '- "zoom kuy" = ngajakin zoom + ngasi link nya, cuma bisa diperintah sama kak Aryo, kak Satria, kak Imam, kak Azul, sama kak Abi aja\n\n'
         result += '- "mabar kuy" atau "kuy lah" = ngajakin temen-temen buat mabar ML pas istirahat\n\n'
         result += '- "ada yang lagi test?" = nanyain temen-temen QE ada yang lagi testing staging gak, soalnya tim BE mau merge deploy kodingan nih\n\n'
         result += '- "makasih luna" = ucapan makasih buat lulu\n\n'
@@ -112,7 +112,7 @@ defineMessage = (message) => {
           result = 'sama-sama kakak.. :)'
           break
       case (message.text.toLowerCase().indexOf('kuy') >= 0):
-          result = 'bacot lu bocah!'
+          result = 'BACOT LU BOCAH'
           break
       default:
         result = false

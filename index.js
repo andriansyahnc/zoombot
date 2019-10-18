@@ -111,12 +111,9 @@ defineMessage = (message) => {
         ):
           result = 'sama-sama kakak.. :)'
           break
-      case (message.text.toLowerCase().indexOf('sis') >= 0):
+      case (message.text.toLowerCase() === 'sis'):
           result = 'iya? ada apa kakak?'
           break
-      // case (message.text.toLowerCase().indexOf('kuy') >= 0):
-      //     result = 'BACOT LU BOCAH'
-      //     break
       default:
         result = false
         break

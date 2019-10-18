@@ -52,18 +52,29 @@ defineMessage = (message) => {
     
     let result = false
     switch(true) {
+      case (message.text.toLowerCase().indexOf('/start') >= 0):
+        result = 'Hai kak. kenalin aku Lulu. Bot Assistent buat tim GADA. \n\n'
+        result += 'Nih daftar kata-kata yang bisa lulu respon: \n\n'
+        result += '- "zoom kuy" = ngajakin zoom (+ ngasi link nya), cuma bisa diperintah sama kak Aryo, kak Satria, kak Imam, kak Azul, sama kak Abi aja\n\n'
+        result += '- "mabar kuy" = ngajakin temen-temen buat mabar ML pas istirahat\n\n'
+        result += '- "ada yang lagi test?" = nanyain temen-temen QE ada yang lagi testing staging gak, soalnya tim BE mau merge deploy kodingan nih\n\n'
+        result += '- "makasih luna" = ucapan makasih buat lulu\n\n'
+        result += '- "sabar sis" = nyabarin lulu\n\n'
+        result += '- "bubar sis" = nyuruh lulu bubar :(\n\n'
+        result += '- "kobar sis" = manggil bang kobar\n\n'
+        break
       case (
         (
           message.from.first_name.toLowerCase().indexOf('aryo') >= 0 ||
           message.from.first_name.toLowerCase().indexOf('satria') >= 0 ||
           message.from.first_name.toLowerCase().indexOf('imam') >= 0 ||
           message.from.first_name.toLowerCase().indexOf('abi') >= 0 ||
+          message.from.first_name.toLowerCase().indexOf('azul') >= 0 ||
           message.from.first_name.toLowerCase().indexOf('alfan') >= 0
         ) &&
         (
           message.text.toLowerCase().indexOf('zoom kuy') >= 0 ||
-          message.text.toLowerCase().indexOf('meeting sis') >= 0 ||
-          message.text.toLowerCase().indexOf('/start') >= 0
+          message.text.toLowerCase().indexOf('meeting sis') >= 0
         )):
           result = 'kuy kak, pake link ini ya.. https://zoom.us/j/9046286650'
           break

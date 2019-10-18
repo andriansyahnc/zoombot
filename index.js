@@ -114,6 +114,9 @@ defineMessage = (message) => {
       case (message.text.toLowerCase() === 'sis' || message.text.toLowerCase() === 'sis?'):
           result = 'iya? ada apa kakak?'
           break
+      case (message.text.toLowerCase().indexOf('bakar bintang kuy') >= 0):
+          result = 'kuy @shinichi_coding, @angga_dar'
+          break
       default:
         result = false
         break

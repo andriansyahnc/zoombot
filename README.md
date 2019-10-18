@@ -2,7 +2,10 @@
 Telegram BOT for Meeting Reminder (ZOOM)
 
 
-# Update:
+# Auto Update
+Just push change into `master` branch, and it will updated in @luna_luna_bot
+
+# Manual Update:
 
 If code has been updated, please re-run [NOW](https://zeit.co/)
 ### now

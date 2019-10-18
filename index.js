@@ -111,6 +111,9 @@ defineMessage = (message) => {
         ):
           result = 'sama-sama kakak.. :)'
           break
+      case (message.text.toLowerCase().indexOf('kuy') >= 0):
+          result = 'bacot lu bocah!'
+          break
       default:
         result = false
         break

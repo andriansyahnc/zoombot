@@ -114,9 +114,9 @@ defineMessage = (message) => {
       case (message.text.toLowerCase().indexOf('sis') >= 0):
           result = 'iya? ada apa kakak?'
           break
-      case (message.text.toLowerCase().indexOf('kuy') >= 0):
-          result = 'BACOT LU BOCAH'
-          break
+      // case (message.text.toLowerCase().indexOf('kuy') >= 0):
+      //     result = 'BACOT LU BOCAH'
+      //     break
       default:
         result = false
         break
